@@ -228,18 +228,15 @@ public class ldapConnection {
 		                }catch (Exception e) {
 		                	upperDeptCode = "";
 						}
+		                HashMap<String, String> hashmap = new HashMap<String, String>();
+		                hashmap.put("DEPT_ID", deptCode);  // 부서코드
+		                hashmap.put("DEPT_NAME", deptName); //부서이름
+		                hashmap.put("UP_DEPT_ID", upperDeptCode); //상위부서코드
+		                hashmap.put("DEPT_ORDER", "1");
+		                hashmap.put("DEPT_FG", "Y");
+		                hashmap.put("DEPT_USERID", null); // 부서장 ID   
 		                
-		                if(!deptCode.equals("noneDeptCode")) {
-			                HashMap<String, String> hashmap = new HashMap<String, String>();
-			                hashmap.put("DEPT_ID", deptCode);  // 부서코드
-			                hashmap.put("DEPT_NAME", deptName); //부서이름
-			                hashmap.put("UP_DEPT_ID", upperDeptCode); //상위부서코드
-			                hashmap.put("DEPT_ORDER", "1");
-			                hashmap.put("DEPT_FG", "Y");
-			                hashmap.put("DEPT_USERID", null); // 부서장 ID   
-			                
-			                deptList.add(hashmap);
-		                }
+		                deptList.add(hashmap);
 	            	}catch (Exception e) {
 						continue; // 부서 list 정리 중 문제 있는 부분은 넘어가게 예외처리 
 					}		        
