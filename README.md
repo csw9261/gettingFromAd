@@ -1,6 +1,6 @@
 ## 프로젝트 소개
 - WINDOW SERVER의 ACTIVE DIRECTORY에서 부서, 인사정보를 가져오는 기능
-- 차 후 Java 라이브러리로 Maven 등록 예정
+- 차 후 Java 라이브러리로 Maven 등록 예정(보류)
 
 ## 개발환경
 - Java
